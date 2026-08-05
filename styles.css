@@ -539,6 +539,41 @@ main {
   display: inline-block;
 }
 
+.token-bar-row {
+  display: grid;
+  grid-template-columns: 110px 1fr 48px;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+.token-bar-row .token-label {
+  color: var(--heading);
+  text-align: right;
+}
+.token-bar-track {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  height: 18px;
+  overflow: hidden;
+}
+.token-bar-fill {
+  background: var(--pink);
+  height: 100%;
+}
+.token-bar-row .token-pct {
+  color: var(--text-muted);
+}
+.token-bar-row.top-pick .token-label,
+.token-bar-row.top-pick .token-pct {
+  color: var(--green);
+}
+.token-bar-row.top-pick .token-bar-fill {
+  background: var(--green);
+}
+
 /* ---------- Bottom Navigation (module pages) ---------- */
 .bottom-nav {
   display: flex;
