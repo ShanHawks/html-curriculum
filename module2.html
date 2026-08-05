@@ -177,6 +177,56 @@
       </ul>
     </section>
 
+<section class="week synthesis">
+      <div class="week-num">Synthesis</div>
+      <h2>Interactive Review &mdash; Identify the Bias</h2>
+      <p class="lede">Three new scenarios &mdash; not from the Ethics Case File wall. Read each one, decide whether the bias is a data problem, a design problem, or a deployment problem, then check your reasoning.</p>
+
+      <div class="quiz-scenario">
+        <h3>Scenario 1</h3>
+        <p class="prompt">A hiring algorithm is trained on ten years of resumes from a company where 90% of the engineers hired were men. When it evaluates new resumes, it downgrades resumes that include the word &ldquo;women&rsquo;s&rdquo; (as in &ldquo;women&rsquo;s coding club&rdquo;).</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q1"> Data bias</label>
+          <label><input type="radio" name="q1"> Design bias</label>
+          <label><input type="radio" name="q1"> Deployment bias</label>
+        </div>
+        <details>
+          <summary>Show the answer</summary>
+          <p><strong>Data bias.</strong> The training data itself reflected the company&rsquo;s past hiring patterns. The model learned those patterns and reproduced them. This is the Amazon hiring algorithm case from 2018.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Scenario 2</h3>
+        <p class="prompt">An algorithm designed to predict which patients need extra medical care uses &ldquo;past healthcare spending&rdquo; as a signal. Because Black patients historically received less care due to systemic barriers, the algorithm underestimated how sick Black patients actually were.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q2"> Data bias</label>
+          <label><input type="radio" name="q2"> Design bias</label>
+          <label><input type="radio" name="q2"> Deployment bias</label>
+        </div>
+        <details>
+          <summary>Show the answer</summary>
+          <p><strong>Design bias.</strong> The developers chose &ldquo;spending&rdquo; as a proxy for &ldquo;need.&rdquo; That choice built the bias into the system. This is the Obermeyer et al. healthcare case from 2019.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Scenario 3</h3>
+        <p class="prompt">A model designed to translate medical documents between English and Spanish is deployed as a courtroom translator, where legal precision and context matter far more than in medical use. It makes errors that a courtroom translator would never make.</p>
+        <div class="quiz-options">
+          <label><input type="radio" name="q3"> Data bias</label>
+          <label><input type="radio" name="q3"> Design bias</label>
+          <label><input type="radio" name="q3"> Deployment bias</label>
+        </div>
+        <details>
+          <summary>Show the answer</summary>
+          <p><strong>Deployment bias.</strong> The model may have been well-designed for its original purpose, but it&rsquo;s being used in a context it wasn&rsquo;t built for. The context of use is where the harm happens.</p>
+        </details>
+      </div>
+
+      <p class="lede">If you got all three, you&rsquo;re ready for the Module 2 assessment. If not, revisit the Week 2 case studies before moving on.</p>
+    </section>
+    
     <nav class="bottom-nav">
       <a href="module1.html">&larr; Previous: Module 01</a>
       <a href="module3.html">Next: Module 03 &rarr;</a>
