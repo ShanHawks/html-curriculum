@@ -421,6 +421,91 @@ main {
   font-size: 15px;
 }
 
+/* ---------- Synthesis / Interactive Blocks ---------- */
+.week.synthesis {
+  border-left: 2px solid var(--pink);
+}
+.week.synthesis .week-num {
+  color: var(--pink);
+}
+
+.quiz-scenario {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+}
+.quiz-scenario h3 {
+  margin-top: 0;
+}
+.quiz-scenario p.prompt {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1.25rem;
+}
+.quiz-options label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  padding: 0.4rem 0;
+}
+.quiz-options input[type="radio"] {
+  accent-color: var(--pink);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+.quiz-options label:hover {
+  color: var(--pink);
+}
+
+.quiz-scenario details {
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+}
+.quiz-scenario summary {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--pink);
+  cursor: pointer;
+  list-style: none;
+}
+.quiz-scenario summary::-webkit-details-marker {
+  display: none;
+}
+.quiz-scenario summary::before {
+  content: "→ ";
+}
+.quiz-scenario details[open] summary::before {
+  content: "↓ ";
+}
+.quiz-scenario details p {
+  margin-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.quiz-scenario details strong {
+  color: var(--green);
+}
+
 /* ---------- Bottom Navigation (module pages) ---------- */
 .bottom-nav {
   display: flex;
