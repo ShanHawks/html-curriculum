@@ -506,6 +506,39 @@ main {
   color: var(--green);
 }
 
+.quiz-scenario input[type="text"] {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-strong);
+  border-radius: 4px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  padding: 0.5rem 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  max-width: 320px;
+}
+.quiz-scenario input[type="text"]:focus {
+  outline: none;
+  border-color: var(--pink);
+}
+.quiz-scenario input[type="text"]::placeholder {
+  color: var(--text-dim);
+}
+
+.quiz-scenario .phrase {
+  font-family: var(--font-mono);
+  font-size: 1.0625rem;
+  color: var(--heading);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
 /* ---------- Bottom Navigation (module pages) ---------- */
 .bottom-nav {
   display: flex;
