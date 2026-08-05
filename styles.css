@@ -574,6 +574,13 @@ main {
   background: var(--green);
 }
 
+.benchmark-group {
+  margin-bottom: 1.5rem;
+}
+.benchmark-group:last-child {
+  margin-bottom: 0;
+}
+
 /* ---------- Bottom Navigation (module pages) ---------- */
 .bottom-nav {
   display: flex;
