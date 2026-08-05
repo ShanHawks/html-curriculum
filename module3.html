@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 03 &mdash; Words, Tokens &amp; Embeddings &middot; Deep Learning or Delulu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="index.html" class="nav-brand">DELULU/</a>
+      <a href="about.html">ABOUT</a>
+      <a href="module1.html">Module 1</a>
+      <a href="module2.html">Module 2</a>
+      <a href="module3.html" class="current">Module 3</a>
+      <a href="module4.html">Module 4</a>
+      <a href="module5.html">Module 5</a>
+      <a href="module6.html">Module 6</a>
+      <a href="resources.html">RESOURCES</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="module-header">
+      <div class="kicker">&gt; Module 03 / 06 &middot; ~3&ndash;5 WEEKS</div>
+      <h1>Words, Tokens, Numbers &amp; Embeddings</h1>
+      <p class="lead">How a computer that only understands numbers can work with human language.</p>
+      <p class="context">Approximately three to five weeks, depending on the instructor's campus pacing calendar. Part of <em>Deep Learning or Delulu: Why Large Language Models Make Stuff Up</em> &mdash; a six-module curriculum for secondary students in grades 6&ndash;12.</p>
+    </header>
+
+    <div class="week-progress">
+      <span class="label">WEEKS:</span>
+      <span class="dot">01</span>
+      <span class="dot">02</span>
+      <span class="dot">03</span>
+      <span class="dot">04</span>
+      <span class="dot">05</span>
+    </div>
+
+    <section class="week">
+      <div class="week-num">Week 01</div>
+      <h2>Why Computers Can't Read</h2>
+      <p class="lede">Students confront the core problem every LLM has to solve &mdash; computers only work with numbers, but humans communicate in words &mdash; and learn the historical attempts to bridge that gap.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>The framing question &mdash; how do you teach a machine to understand the word "cat"?</li>
+        <li>ASCII and Unicode &mdash; assigning every character a number.</li>
+        <li>Bag-of-words from the 1950s to 2000s &mdash; counting word frequency.</li>
+        <li>The limitations of bag-of-words &mdash; it loses both order and meaning.</li>
+        <li>Why this matters &mdash; every modern model still starts by turning text into numbers.</li>
+        <li>Begin the wall chart, "How a Word Becomes a Number."</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li>Anil Ananthaswamy, <em>Why Machines Learn</em> &mdash; sections on representing data as numbers.</li>
+        <li><a href="https://www.youtube.com/watch?v=LMkJuDVJdTw" target="_blank">CGP Grey &mdash; How Computers Translate Human Language</a>.</li>
+        <li><a href="https://www.youtube.com/watch?v=MijmeoH9LT4" target="_blank">Computerphile &mdash; Characters, Symbols and the Unicode Miracle</a>.</li>
+        <li><a href="https://www.asciitable.com/" target="_blank">ASCII table reference</a>.</li>
+        <li>Teacher-prepared Google Colab notebook &mdash; a simple bag-of-words counter.</li>
+        <li><em>Hello World</em> magazine, Raspberry Pi Foundation.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 02</div>
+      <h2>Tokens</h2>
+      <p class="lede">Students learn that LLMs don't read words &mdash; they read tokens, the model's own peculiar chunks of language &mdash; and see firsthand how that choice shapes everything the model does.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>The tokenization problem &mdash; there are too many possible words for a model to learn one number per word.</li>
+        <li>Subword tokens &mdash; common words become one token, rare words become several.</li>
+        <li>Hands-on exploration with the OpenAI tokenizer.</li>
+        <li>Three discoveries &mdash; spaces belong to the next token, common English is cheap, other languages are expensive.</li>
+        <li>The fairness consequence &mdash; non-English speakers pay more and get worse results.</li>
+        <li>Byte-Pair Encoding, BPE, taught conceptually as the algorithm behind tokenization.</li>
+        <li>Update the wall chart &mdash; text becomes tokens.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://platform.openai.com/tokenizer" target="_blank">OpenAI Tokenizer</a>.</li>
+        <li><a href="https://tiktokenizer.vercel.app/" target="_blank">Tiktokenizer</a>.</li>
+        <li><a href="https://www.youtube.com/watch?v=zduSFxRajkE" target="_blank">Andrej Karpathy &mdash; Let's build the GPT Tokenizer</a>.</li>
+        <li><a href="https://simonwillison.net/" target="_blank">Simon Willison's blog</a>.</li>
+        <li><a href="https://huggingface.co/docs/transformers/tokenizer_summary" target="_blank">Hugging Face &mdash; Summary of the tokenizers</a>.</li>
+        <li>Teacher-prepared "Token Math" handout.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 03</div>
+      <h2>From Tokens to Vectors</h2>
+      <p class="lede">Students take the leap from "every token gets a number" to "every token gets a list of numbers that captures what it means" &mdash; the embedding idea that makes modern AI possible.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>The leap &mdash; a single number per token carries no meaning, but a list of numbers, a vector, can.</li>
+        <li>The classroom analogy &mdash; describing a person with one number versus a list of numbers.</li>
+        <li>Embeddings defined &mdash; a list of numbers, often 768 or more, where similar words land near each other.</li>
+        <li>The classic demonstration &mdash; king minus man plus woman is near queen.</li>
+        <li>Word2Vec, 2013, Tom&aacute;&scaron; Mikolov and the Google team.</li>
+        <li>Visualizing high-dimensional embeddings in 2D and 3D.</li>
+        <li>The big idea &mdash; meaning is geometric. The model stores positions in space, not definitions.</li>
+        <li>Update the wall chart &mdash; tokens become vectors.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://projector.tensorflow.org/" target="_blank">TensorFlow Embedding Projector</a>.</li>
+        <li><a href="https://www.youtube.com/watch?v=wjZofJX0v4M" target="_blank">3Blue1Brown &mdash; But what is a GPT?</a> &mdash; the embedding section.</li>
+        <li>Anil Ananthaswamy, <em>Why Machines Learn</em> &mdash; chapters on vectors.</li>
+        <li><a href="https://jalammar.github.io/illustrated-word2vec/" target="_blank">Jay Alammar &mdash; The Illustrated Word2Vec</a>.</li>
+        <li><a href="https://developers.google.com/machine-learning/crash-course/embeddings" target="_blank">Google Machine Learning Crash Course &mdash; Embeddings</a>.</li>
+        <li>Teacher-prepared Colab notebook for cosine similarity exploration.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 04</div>
+      <h2>Geometry of Meaning</h2>
+      <p class="lede">Students dig into the geometry &mdash; how "close" two ideas are in vector space, what that closeness predicts well, and where it breaks down.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>Cosine similarity, taught visually as the angle between two arrows.</li>
+        <li>Hands-on semantic search over a small database of sentences.</li>
+        <li>What embeddings capture well &mdash; synonyms, categories, analogies.</li>
+        <li>Where embeddings fail &mdash; bias bakes in geometrically. "Doctor" sits closer to "he," "nurse" closer to "she."</li>
+        <li>Bolukbasi and others, 2016 &mdash; the paper that named the geometric bias problem.</li>
+        <li>Polysemy &mdash; the word "bank" gets one vector for two different meanings.</li>
+        <li>Real-world uses &mdash; semantic search, recommendation systems, and retrieval-augmented generation.</li>
+        <li>Update the wall chart &mdash; vectors become meaning through similarity and distance.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://projector.tensorflow.org/" target="_blank">TensorFlow Embedding Projector</a> &mdash; continued from Week 3.</li>
+        <li>Bolukbasi and others, "Man is to Computer Programmer as Woman is to Homemaker?" (2016).</li>
+        <li><a href="https://jalammar.github.io/illustrated-transformer/" target="_blank">Jay Alammar &mdash; The Illustrated Transformer</a>.</li>
+        <li><a href="https://docs.cohere.com/docs/embeddings" target="_blank">Cohere &mdash; What Are Embeddings?</a>.</li>
+        <li><a href="https://simonwillison.net/2023/Oct/23/embeddings/" target="_blank">Simon Willison &mdash; Embeddings: What they are and why they matter</a>.</li>
+        <li>Teacher-prepared semantic search Colab notebook.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 05</div>
+      <h2>Build a Mini Semantic Search Engine</h2>
+      <p class="lede">Students consolidate the whole pipeline &mdash; text to tokens to vectors to meaning &mdash; by building a small but real semantic search tool, then defend their understanding in a written and oral assessment.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>Review and trace the pipeline end-to-end on the wall chart.</li>
+        <li>Build a mini semantic search engine over a corpus of their choice.</li>
+        <li>Explain how text became tokens.</li>
+        <li>Explain how tokens became vectors.</li>
+        <li>Explain why some searches worked and some didn't.</li>
+        <li>Identify one thing the embedding got wrong, with a hypothesis for why.</li>
+        <li>Demo day with 3 to 5 minute presentations and structured peer questions.</li>
+        <li>Module 3 written assessment &mdash; vocabulary, diagram completion, and short answer.</li>
+        <li>Bridge to Module 4.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://colab.research.google.com/" target="_blank">Google Colab</a>.</li>
+        <li><a href="https://www.sbert.net/" target="_blank">Hugging Face sentence-transformers library</a>.</li>
+        <li>The completed wall chart from Weeks 1 to 4.</li>
+        <li>3Blue1Brown GPT series &mdash; re-watched as review.</li>
+        <li>Teacher-provided rubric and sample student-built search engines.</li>
+      </ul>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="module2.html">&larr; Previous: Module 02</a>
+      <a href="module4.html">Next: Module 04 &rarr;</a>
+      <a href="resources.html">Full resource list</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand">DELULU/</span> &middot; LLM FOUNDATIONS &middot; SMU MSDS CAPSTONE &middot; 2026
+  </footer>
+
+</body>
+</html>

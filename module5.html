@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Module 05 &mdash; Pretrain, Finetune &amp; Evaluate &middot; Deep Learning or Delulu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="site-nav">
+    <div class="site-nav-inner">
+      <a href="index.html" class="nav-brand">DELULU/</a>
+      <a href="about.html">ABOUT</a>
+      <a href="module1.html">Module 1</a>
+      <a href="module2.html">Module 2</a>
+      <a href="module3.html">Module 3</a>
+      <a href="module4.html">Module 4</a>
+      <a href="module5.html" class="current">Module 5</a>
+      <a href="module6.html">Module 6</a>
+      <a href="resources.html">RESOURCES</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <header class="module-header">
+      <div class="kicker">&gt; Module 05 / 06 &middot; ~3&ndash;5 WEEKS</div>
+      <h1>Pretrain, Finetune, Modify &amp; Evaluate</h1>
+      <p class="lead">The full model lifecycle &mdash; from raw internet to a model students can audit and defend.</p>
+      <p class="context">Approximately three to five weeks, depending on the instructor's campus pacing calendar. Part of <em>Deep Learning or Delulu: Why Large Language Models Make Stuff Up</em> &mdash; a six-module curriculum for secondary students in grades 6&ndash;12.</p>
+    </header>
+
+    <div class="week-progress">
+      <span class="label">WEEKS:</span>
+      <span class="dot">01</span>
+      <span class="dot">02</span>
+      <span class="dot">03</span>
+      <span class="dot">04</span>
+      <span class="dot">05</span>
+    </div>
+
+    <section class="week">
+      <div class="week-num">Week 01</div>
+      <h2>Pretraining</h2>
+      <p class="lede">Students learn that the difference between their tiny Shakespeare-trained GPT and ChatGPT isn't the architecture &mdash; it's the scale and source of the data the model learned from.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>Pretraining defined &mdash; the first and most expensive stage.</li>
+        <li>The internet as training data &mdash; Common Crawl, Wikipedia, books, GitHub.</li>
+        <li>The scale problem &mdash; compute, time, and energy.</li>
+        <li>What pretraining produces &mdash; a base model, and how it differs from an assistant.</li>
+        <li>Data curation &mdash; the invisible work of quality filtering and deduplication.</li>
+        <li>Kaplan and colleagues, 2020 &mdash; scaling laws.</li>
+        <li>Hoffmann and colleagues, 2022 &mdash; the Chinchilla correction.</li>
+        <li>Begin the lifecycle diagram on the wall.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/watch?v=zjkBMFhNj_g" target="_blank">Andrej Karpathy &mdash; Intro to Large Language Models</a> &mdash; pretraining sections.</li>
+        <li><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank">Hugging Face Open LLM Leaderboard</a>.</li>
+        <li><a href="https://commoncrawl.org/" target="_blank">Common Crawl</a>.</li>
+        <li>Teacher-prepared base-model demo.</li>
+        <li><a href="https://arxiv.org/abs/2001.08361" target="_blank">Kaplan and others &mdash; Scaling Laws (2020)</a>.</li>
+        <li><a href="https://arxiv.org/abs/2203.15556" target="_blank">Hoffmann and others &mdash; Chinchilla (2022)</a>.</li>
+        <li><a href="https://pile.eleuther.ai/" target="_blank">The Pile</a> and <a href="https://www.together.ai/blog/redpajama" target="_blank">RedPajama</a>.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 02</div>
+      <h2>Finetuning</h2>
+      <p class="lede">Students learn how a useless-feeling base model is transformed into the helpful, instruction-following assistants they actually use, and the role human feedback plays.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>The gap between pretraining and usefulness, demonstrated side by side.</li>
+        <li>Supervised Fine-Tuning &mdash; imitating human question-and-answer examples.</li>
+        <li>Reinforcement Learning from Human Feedback &mdash; the model learns taste.</li>
+        <li>InstructGPT, 2022 &mdash; Long Ouyang, Paul Christiano, and the paper behind ChatGPT.</li>
+        <li>Constitutional AI &mdash; Anthropic's principle-based approach.</li>
+        <li>The human labor behind finetuning.</li>
+        <li>Hands-on &mdash; finetune a small model on a custom author corpus.</li>
+        <li>Update the lifecycle diagram &mdash; Finetune stage fills in.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://arxiv.org/abs/2203.02155" target="_blank">Ouyang and others &mdash; InstructGPT (2022)</a>.</li>
+        <li><a href="https://huggingface.co/learn/nlp-course" target="_blank">Hugging Face NLP Course</a>.</li>
+        <li><a href="https://arxiv.org/abs/2212.08073" target="_blank">Bai and others &mdash; Constitutional AI (2022)</a>.</li>
+        <li><a href="https://www.anthropic.com/news/claudes-constitution" target="_blank">Claude's Constitution</a>.</li>
+        <li>Teacher-prepared finetuning Colab notebook.</li>
+        <li>Karen Hao, <em>Empire of AI</em> (2025).</li>
+        <li>OpenAI and Anthropic model cards.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 03</div>
+      <h2>Modifying Models</h2>
+      <p class="lede">Students learn the many ways a finished model can be modified for specific uses without retraining it from scratch, and why these techniques matter for anyone who builds with AI.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>Three levels of modification &mdash; prompting, RAG, and adapters.</li>
+        <li>Prompt engineering as a real skill &mdash; system prompts, few-shot, chain-of-thought.</li>
+        <li>Build a personal prompt library.</li>
+        <li>Retrieval-Augmented Generation explained &mdash; search plus generation.</li>
+        <li>Hands-on RAG project over a corpus students choose.</li>
+        <li>LoRA and adapters &mdash; cheap, stackable modifications.</li>
+        <li>The industry pattern &mdash; frontier model plus your data.</li>
+        <li>Update the lifecycle diagram &mdash; Modify stage fills in.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://platform.openai.com/docs/guides/prompt-engineering" target="_blank">OpenAI &mdash; Prompt engineering guide</a>.</li>
+        <li><a href="https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/overview" target="_blank">Anthropic &mdash; Prompt engineering</a>.</li>
+        <li><a href="https://lilianweng.github.io/" target="_blank">Lilian Weng's blog</a>.</li>
+        <li><a href="https://python.langchain.com/" target="_blank">LangChain</a> or <a href="https://docs.llamaindex.ai/" target="_blank">LlamaIndex</a>.</li>
+        <li><a href="https://simonwillison.net/" target="_blank">Simon Willison &mdash; RAG and prompt injection posts</a>.</li>
+        <li><a href="https://huggingface.co/docs/peft/" target="_blank">Hugging Face &mdash; PEFT and LoRA</a>.</li>
+        <li><a href="https://huggingface.co/" target="_blank">Hugging Face Hub</a>.</li>
+        <li>Teacher-prepared "Prompt Library" template.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 04</div>
+      <h2>Evaluation</h2>
+      <p class="lede">Students learn the science &mdash; and the current crisis &mdash; of evaluating LLMs, including standard benchmarks, their weaknesses, and the practitioner's craft of building your own evals.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>The central problem &mdash; how do you measure something that can do almost anything?</li>
+        <li>Standard benchmarks &mdash; MMLU, HumanEval, GSM8K, HellaSwag, ARC, TruthfulQA.</li>
+        <li>The leaderboard reality &mdash; Hugging Face, Chatbot Arena, Artificial Analysis.</li>
+        <li>Why benchmarks lie &mdash; contamination, saturation, and gaming.</li>
+        <li>Chatbot Arena and human preference evaluation. Students participate.</li>
+        <li>Build your own eval &mdash; 10 test cases for a task the student cares about, tested on 2 or 3 models.</li>
+        <li>The transfer to data science evaluation more broadly.</li>
+        <li>Update the lifecycle diagram &mdash; Evaluate stage fills in.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li><a href="https://lmarena.ai/" target="_blank">Chatbot Arena</a>.</li>
+        <li><a href="https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard" target="_blank">Hugging Face Open LLM Leaderboard</a>.</li>
+        <li><a href="https://artificialanalysis.ai/" target="_blank">Artificial Analysis</a>.</li>
+        <li><a href="https://arxiv.org/abs/2009.03300" target="_blank">Hendrycks and others &mdash; MMLU (2020)</a>.</li>
+        <li><a href="https://arxiv.org/abs/2107.03374" target="_blank">Chen and others &mdash; HumanEval (2021)</a>.</li>
+        <li><a href="https://docs.anthropic.com/" target="_blank">Anthropic evaluation documentation</a>.</li>
+        <li><a href="https://github.com/openai/evals" target="_blank">OpenAI Evals</a>.</li>
+        <li>Teacher-prepared "Build Your Own Eval" template.</li>
+      </ul>
+    </section>
+
+    <section class="week">
+      <div class="week-num">Week 05</div>
+      <h2>Model Audit and Synthesis</h2>
+      <p class="lede">Students consolidate the full model lifecycle, apply it to a model of their choosing, and produce a real audit deliverable.</p>
+
+      <h3>What students learn</h3>
+      <ol>
+        <li>Walk the lifecycle diagram end-to-end alongside the Module 3 and Module 4 artifacts.</li>
+        <li>Choose one real current model to audit &mdash; Claude, GPT-4, Llama, Mistral, or Gemma.</li>
+        <li>Research what is publicly known about the model's pretraining.</li>
+        <li>Research what is publicly known about the model's finetuning.</li>
+        <li>Identify what user modifications are available.</li>
+        <li>Score the model on two benchmarks and interpret the results.</li>
+        <li>Hands-on testing &mdash; identify one task it does well and one it does poorly.</li>
+        <li>Module 5 assessment &mdash; vocabulary, lifecycle trace, and application to real problems.</li>
+        <li>Peer audit exchange with one written question each.</li>
+        <li>Bridge to Module 6.</li>
+      </ol>
+
+      <h3>Key resources</h3>
+      <ul>
+        <li>Model cards from <a href="https://huggingface.co/" target="_blank">Hugging Face</a>, <a href="https://docs.anthropic.com/" target="_blank">Anthropic</a>, and other labs.</li>
+        <li><a href="https://arxiv.org/abs/2303.08774" target="_blank">GPT-4 Technical Report</a>.</li>
+        <li><a href="https://www-cdn.anthropic.com/de8ba9b01c9ab7cbabf5c33b80b7bbc618857627/Model_Card_Claude_3.pdf" target="_blank">Claude 3 Model Card</a>.</li>
+        <li><a href="https://arxiv.org/abs/2407.21783" target="_blank">Llama 3 Technical Report</a>.</li>
+        <li><a href="https://arxiv.org/abs/2312.11805" target="_blank">Gemini Technical Report</a>.</li>
+        <li>Teacher-provided audit template and rubric.</li>
+        <li>The completed wall artifacts from Modules 3, 4, and 5.</li>
+      </ul>
+    </section>
+
+    <nav class="bottom-nav">
+      <a href="module4.html">&larr; Previous: Module 04</a>
+      <a href="module6.html">Next: Module 06 &rarr;</a>
+      <a href="resources.html">Full resource list</a>
+    </nav>
+
+  </main>
+
+  <footer class="site-footer">
+    <span class="brand">DELULU/</span> &middot; LLM FOUNDATIONS &middot; SMU MSDS CAPSTONE &middot; 2026
+  </footer>
+
+</body>
+</html>
