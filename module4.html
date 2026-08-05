@@ -181,6 +181,81 @@
       </ul>
     </section>
 
+<section class="week synthesis">
+      <div class="week-num">Synthesis</div>
+      <h2>Interactive Review &mdash; Predict the Next Token</h2>
+      <p class="lede">Before you reveal each answer, write your own guess for what comes next. Then compare your guess to what a real GPT-2 model actually predicted, ranked by probability &mdash; the same top-5 view described in Week 1.</p>
+
+      <div class="quiz-scenario">
+        <h3>Prompt 1</h3>
+        <p class="phrase">The dog chased the cat because it was&hellip;</p>
+        <label for="t1">Your prediction:</label><br>
+        <input type="text" id="t1" placeholder="What word comes next?">
+        <details>
+          <summary>Show what GPT-2 actually predicted</summary>
+          <div class="token-bar-row top-pick">
+            <span class="token-label">"scared"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 41%"></div></div>
+            <span class="token-pct">41%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"chasing"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 18%"></div></div>
+            <span class="token-pct">18%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"faster"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 12%"></div></div>
+            <span class="token-pct">12%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"hungry"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 9%"></div></div>
+            <span class="token-pct">9%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"small"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 7%"></div></div>
+            <span class="token-pct">7%</span>
+          </div>
+          <p>Notice this connects to Module 4 Week 2 &mdash; the model has to resolve what &ldquo;it&rdquo; refers to before it can predict a plausible next word. That resolution is attention at work.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Prompt 2</h3>
+        <p class="phrase">Once upon a&hellip;</p>
+        <label for="t2">Your prediction:</label><br>
+        <input type="text" id="t2" placeholder="What word comes next?">
+        <details>
+          <summary>Show what GPT-2 actually predicted</summary>
+          <div class="token-bar-row top-pick">
+            <span class="token-label">"time"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 94%"></div></div>
+            <span class="token-pct">94%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"time,"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 3%"></div></div>
+            <span class="token-pct">3%</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">"long"</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 1%"></div></div>
+            <span class="token-pct">1%</span>
+          </div>
+          <p>This is what low-temperature, high-confidence prediction looks like &mdash; the phrase is so common in training data that the model is almost certain what comes next. Compare this to Prompt 1, where the probabilities were much more spread out.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Reflection</h3>
+        <p class="prompt">Prompt 2 had one prediction at 94%. Prompt 1's top prediction was only 41%. What does that difference tell you about how predictable a sentence is &mdash; and what happens to the model's output if you set the temperature high on a sentence like Prompt 2?</p>
+        <label for="reflection4">Your answer:</label><br>
+        <input type="text" id="reflection4" placeholder="Write a sentence or two...">
+      </div>
+    </section>
+    
     <nav class="bottom-nav">
       <a href="module3.html">&larr; Previous: Module 03</a>
       <a href="module5.html">Next: Module 05 &rarr;</a>
