@@ -190,6 +190,65 @@
       </ul>
     </section>
 
+<section class="week synthesis">
+      <div class="week-num">Synthesis</div>
+      <h2>Interactive Review &mdash; What the Benchmark Doesn't Tell You</h2>
+      <p class="lede">Approximate MMLU scores across major models &mdash; a multiple-choice test across 57 academic subjects, out of 100. These numbers shift constantly; check <a href="https://artificialanalysis.ai/" target="_blank">Artificial Analysis</a> for current values. Look at the scores, then answer the questions below before revealing the discussion.</p>
+
+      <div class="quiz-scenario">
+        <div class="benchmark-group">
+          <div class="token-bar-row top-pick">
+            <span class="token-label">Claude 3.5 Sonnet</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 88%"></div></div>
+            <span class="token-pct">88</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">GPT-4</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 86%"></div></div>
+            <span class="token-pct">86</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">Llama 3 (70B)</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 82%"></div></div>
+            <span class="token-pct">82</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">Gemini Pro</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 80%"></div></div>
+            <span class="token-pct">80</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">GPT-3.5</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 70%"></div></div>
+            <span class="token-pct">70</span>
+          </div>
+          <div class="token-bar-row">
+            <span class="token-label">Human expert</span>
+            <div class="token-bar-track"><div class="token-bar-fill" style="width: 90%"></div></div>
+            <span class="token-pct">90</span>
+          </div>
+        </div>
+
+        <p class="prompt">Question 1: Based only on these scores, which model should a student pick to help rewrite a paragraph at a 4th-grade reading level?</p>
+        <label for="q1m5">Your answer:</label><br>
+        <input type="text" id="q1m5" placeholder="Which model, and why?">
+
+        <details>
+          <summary>Show the discussion</summary>
+          <p><strong>Trick question.</strong> MMLU cannot answer this. It measures general academic knowledge across 57 subjects &mdash; not reading-level rewriting, not tone, not clarity for young readers. A model could score 88 on MMLU and still be worse at 4th-grade rewriting than a model that scores 70. This is why Week 4 introduces the idea of building your own eval for the specific task you actually care about.</p>
+        </details>
+
+        <p class="prompt">Question 2: Claude 3.5 Sonnet and Human Expert are close &mdash; 88 versus 90. Does this mean the model reasons like an expert?</p>
+        <label for="q2m5">Your answer:</label><br>
+        <input type="text" id="q2m5" placeholder="Yes, no, or it depends?">
+
+        <details>
+          <summary>Show the discussion</summary>
+          <p><strong>Not necessarily.</strong> Two honest problems from Week 4 apply here. <strong>Contamination</strong> &mdash; the model may have seen MMLU questions, or very similar ones, during training, which inflates the score without proving real understanding. <strong>Saturation</strong> &mdash; once most frontier models score above 80, the test stops distinguishing meaningfully between them. A close score to a human expert on this one benchmark is evidence of something, but it is not proof of expert-level reasoning in the real world.</p>
+        </details>
+      </div>
+    </section>
+    
     <nav class="bottom-nav">
       <a href="module4.html">&larr; Previous: Module 04</a>
       <a href="module6.html">Next: Module 06 &rarr;</a>
