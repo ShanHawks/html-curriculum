@@ -182,6 +182,68 @@
       </ul>
     </section>
 
+<section class="week synthesis">
+      <div class="week-num">Synthesis</div>
+      <h2>Interactive &mdash; Choose Your Capstone Track</h2>
+      <p class="lede">Expand each track below before you commit. Then draft the start of your project brief &mdash; you can revise it at your one-on-one conference with the instructor.</p>
+
+      <div class="quiz-scenario">
+        <h3>Track 1</h3>
+        <details>
+          <summary>Build track &mdash; what does it involve?</summary>
+          <p>You build a fine-tuned model or a RAG-powered tool over a corpus you care about. Examples &mdash; a study-guide generator for a specific textbook, a chatbot that speaks in the voice of a historical figure, a writing-feedback tool for younger students.</p>
+          <p><strong>Skills built:</strong> Fine-tuning, retrieval-augmented generation, data curation, evaluating your own model's outputs.</p>
+          <p><strong>Success looks like:</strong> A working Colab notebook others can run, a documented corpus, and a live demonstration of the tool doing what you designed it to do.</p>
+          <p><strong>Best fit if you:</strong> Enjoyed building the tiny GPT in Module 4 and want to go deeper into the mechanics of training a model.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Track 2</h3>
+        <details>
+          <summary>Modify track &mdash; what does it involve?</summary>
+          <p>You build a prompt-engineered application using a frontier model API (Claude, GPT-4) or a thoughtfully-configured custom GPT, aimed at a real use case with real users.</p>
+          <p><strong>Skills built:</strong> Advanced prompt engineering, system prompt design, user testing, iteration based on real feedback.</p>
+          <p><strong>Success looks like:</strong> A working tool with a documented prompt library, evidence that real users tested it, and a written reflection on what changed between your first version and your final one.</p>
+          <p><strong>Best fit if you:</strong> Want to focus on building something people can actually use, and are more interested in application design than training internals.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Track 3</h3>
+        <details>
+          <summary>Evaluate track &mdash; what does it involve?</summary>
+          <p>You produce a rigorous, original evaluation of an existing model for a specific task you care about &mdash; deeper than the Module 5 audit. More test cases, more models compared, a written recommendation at the end.</p>
+          <p><strong>Skills built:</strong> Evaluation design, test-case writing, rubric development, technical writing.</p>
+          <p><strong>Success looks like:</strong> A written report comparing 2 to 4 models on a specific task, with 15 or more test cases, a scoring rubric, and a clear, defended recommendation.</p>
+          <p><strong>Best fit if you:</strong> Enjoyed the Module 5 model audit and want to develop the specific skill set of a machine-learning evaluator or data scientist.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Start Your Project Brief</h3>
+        <p class="prompt">You can revise every answer at your one-on-one conference. Nothing here is final.</p>
+
+        <label for="track">My chosen track:</label><br>
+        <input type="text" id="track" placeholder="Build, Modify, or Evaluate">
+
+        <label for="onesentence">What my tool will do, in one sentence:</label><br>
+        <input type="text" id="onesentence" placeholder="Type your one-sentence description">
+
+        <label for="user">Who my intended user is:</label><br>
+        <input type="text" id="user" placeholder="Be specific &mdash; not just 'students'">
+
+        <label for="working">What "working" will look like for version 1:</label><br>
+        <input type="text" id="working" placeholder="The minimum viable version">
+
+        <label for="outofscope">What is out of scope for version 1:</label><br>
+        <input type="text" id="outofscope" placeholder="What am I NOT going to try to do?">
+
+        <label for="killcriteria">My kill criteria &mdash; what would make me stop or pivot:</label><br>
+        <input type="text" id="killcriteria" placeholder="Be honest with yourself here">
+      </div>
+    </section>
+    
     <nav class="bottom-nav">
       <a href="module5.html">&larr; Previous: Module 05</a>
       <a href="index.html">Back to home</a>
