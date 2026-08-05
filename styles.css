@@ -40,6 +40,8 @@ body {
   line-height: 1.6;
   padding-top: 60px;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -122,6 +124,8 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 3rem 24px 6rem;
+  flex: 1;
+  width: 100%;
 }
 
 /* ---------- Hero (home page) ---------- */
@@ -681,10 +685,10 @@ main {
 .rubric-total .total-pts { font-size: 1.5rem; }
 
 /* ---------- Site Footer ---------- */
+.site-footer {
   padding: 2rem 24px;
   border-top: 1px solid var(--border);
-  max-width: var(--max-width);
-  margin: 4rem auto 0;
+  margin: 0;
   font-family: var(--font-mono);
   font-size: 10px;
   color: var(--text-dim);
