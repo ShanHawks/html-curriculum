@@ -178,6 +178,63 @@
       </ul>
     </section>
 
+<section class="week synthesis">
+      <div class="week-num">Synthesis</div>
+      <h2>Interactive Review &mdash; Predict the Token Count</h2>
+      <p class="lede">Before you check, write down your prediction for how many tokens each phrase will use. Then test it yourself on the <a href="https://platform.openai.com/tokenizer" target="_blank">OpenAI Tokenizer</a> and see how close you were.</p>
+
+      <div class="quiz-scenario">
+        <h3>Phrase 1</h3>
+        <p class="phrase">the cat sat on the mat</p>
+        <label for="p1">My prediction (number of tokens):</label><br>
+        <input type="text" id="p1" placeholder="e.g. 6">
+        <details>
+          <summary>Show the answer</summary>
+          <p>Around 6 or 7 tokens. All common English words, mostly one token each.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Phrase 2</h3>
+        <p class="phrase">antidisestablishmentarianism</p>
+        <label for="p2">My prediction (number of tokens):</label><br>
+        <input type="text" id="p2" placeholder="e.g. 6">
+        <details>
+          <summary>Show the answer</summary>
+          <p>Around 6 to 8 tokens. It's one word, but the model breaks it into subword pieces because the whole word is rare.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Phrase 3</h3>
+        <p class="phrase">&iexcl;Hola! &iquest;C&oacute;mo est&aacute;s?</p>
+        <label for="p3">My prediction (number of tokens):</label><br>
+        <input type="text" id="p3" placeholder="e.g. 10">
+        <details>
+          <summary>Show the answer</summary>
+          <p>Around 10 to 12 tokens. Non-English languages and special characters like &iexcl; and &iquest; cost significantly more tokens than English text. This is why non-English speakers effectively pay more to use the same models &mdash; the same idea from Week 2's fairness discussion.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Phrase 4</h3>
+        <p class="phrase">&#128049;&#128054;&#129418;&#128048;</p>
+        <label for="p4">My prediction (number of tokens):</label><br>
+        <input type="text" id="p4" placeholder="e.g. 8">
+        <details>
+          <summary>Show the answer</summary>
+          <p>Around 8 to 16 tokens depending on the model. Emoji are often multiple tokens each, even though they look like a single character.</p>
+        </details>
+      </div>
+
+      <div class="quiz-scenario">
+        <h3>Reflection</h3>
+        <p class="prompt">Which of the four phrases was most expensive in tokens? What does that tell you about how LLMs &ldquo;see&rdquo; different languages?</p>
+        <label for="reflection">Your answer:</label><br>
+        <input type="text" id="reflection" placeholder="Write a sentence or two...">
+      </div>
+    </section>
+    
     <nav class="bottom-nav">
       <a href="module2.html">&larr; Previous: Module 02</a>
       <a href="module4.html">Next: Module 04 &rarr;</a>
