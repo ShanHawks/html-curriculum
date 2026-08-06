@@ -349,6 +349,7 @@ main {
   padding: 0.5rem 0 0.5rem 2rem;
   margin-bottom: 3.5rem;
   position: relative;
+  scroll-margin-top: 90px;
 }
 .week-num {
   font-family: var(--font-mono);
